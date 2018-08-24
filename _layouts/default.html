@@ -22,16 +22,18 @@
   <![endif]-->
   <div class="page">
     <div class="header">
-      <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-      <div class="site-info">
-        <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-        <p class="site-description">{{ site.description }}</p>
-      </div>
+      <div class="header__content">
+        <div class="header__site-info">
+          <h1 class="header__site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+          <p class="header__site-description">{{ site.description }}</p>
+        </div>
 
-      <nav>
-        <a href="{{ site.baseurl }}/">Blog</a>
-        <a href="{{ site.baseurl }}/about">About</a>
-      </nav>
+        <nav class="header__nav">
+          <a class="header__nav-item" href="{{ site.baseurl }}/">Blog</a>
+          <a class="header__nav-item" href="{{ site.baseurl }}/about">About</a>
+          <a class="header__nav-item" href="{{ site.baseurl }}/404">Last Page</a>
+        </nav>
+      </div>
     </div>
 
     <main class="content">

@@ -10,6 +10,17 @@
     display: none !important;
 }
 
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+$bg: #5cdb95;
+$dark: #05386b;
+$medium: #379683;
+
+// #8ee4af
+// #edf5e1
+
 /* ==========================================================================
    Typography classes
 
@@ -46,8 +57,7 @@
        url('/sams-jekyll-theme/fonts/alegreya-sans-v8-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-
-html {font-size: 20px;} // Use px instead of em to prevent cross-browser zooming inconsistency
+html {font-size: 16px;} // Use px instead of em to prevent cross-browser zooming inconsistency
 
 body {
   background-color: white;
@@ -57,40 +67,142 @@ body {
   color: #333;
 }
 
-p {margin-bottom: 1.3em;}
+p {margin: 0 0 1.3em 0;}
 
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;
   font-weight: inherit;
   line-height: 1.2;
+  color: $dark;
 }
 
-h1 {
+h1, .h1 {
   margin-top: 0;
-  font-size: 3.998em;
+  font-size: 2.441em;
 }
 
-h2 {font-size: 2.827em;}
+h2, .h2 {font-size: 1.953em;}
 
-h3 {font-size: 1.999em;}
+h3, .h3 {font-size: 1.563em;}
 
-h4 {font-size: 1.414em;}
+h4, .h4 {font-size: 1.25em;}
 
-small, .font_small {font-size: 0.707em;}
+small, .font_small {font-size: 0.8em;}
+
+@media (min-width: 480px) {
+    html {font-size: 18px;}
+}
+
+a { color: $dark; }
 
 /* ==========================================================================
    Layout classes
    ========================================================================== */
 
 .page {
+    overflow: hidden;
+    
+}
+
+.header {
+    width: 100%;
+    margin: 0 0 2em;
+
+    text-align: center;
+    background-color: $bg;
+
+    &__content {
+        padding: 1em 0 1.5em;
+        margin: 0 auto;
+    }
+
+    a {
+        text-decoration: none;
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    &__site-name {
+        margin: 0;
+        @media (max-width: 360px) {
+            font-size: 2.197em; // between h1 & h2
+        }
+    }
+
+    &__site-description {
+        color: $medium;
+    }
+
+    &__nav {}
+
+    &__nav-item {
+        &:not(:last-child):after {
+            content: '•';
+            padding-left: 3px;
+            font-weight: 100;
+            color: $medium;
+        }
+    }
+
+    @media (min-width: 480px) {
+        &__content {
+            max-width: calc(100% - 2em);
+            width: 40em;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            
+            padding-bottom: 0;
+            text-align: left;
+        }
+
+        &__site-name { 
+            font-size: 1.563em;
+            margin-bottom: 0;
+        }
+
+        &__site-description {
+            font-size: 0.8em;
+        }
+    }
+
+}
+
+.content {
+    width: 30em;
+    margin: 0 auto;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.posts {
+    margin: 1em 0;
+
+    &__preview {
+        margin-bottom: 2em;
+        h1 {
+            text-align: left;
+        }
+    }
+}
+
+.post {
+    margin: 0 0 2em;
+}
+
+.footer {
     width: 30em;
     max-width: calc(100% - 2em);
     margin: 0 auto;
 }
 
-.header {
-
-}
-
 .site-name {
+
+    a {
+        
+    }
 }
