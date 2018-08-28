@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<h1 class="posts-title">Tag: {{ page.tag }}</h1>
+
+<div class="posts">
+	{% for post in site.tags[page.tag] %}
+	  <article class="posts__preview">
+
+	    <h1 class="h2 posts__title">
+	    	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+	    </h1>
+
+	    <div class="posts__date">{{ post.date | date: "%B %e, %Y" }}</div>
+
+	    <div class="posts__excerpt">{{ post.excerpt }}</div>
+
+	  </article>
+	{% endfor %}
+</div>

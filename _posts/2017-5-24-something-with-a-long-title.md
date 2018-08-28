@@ -2,7 +2,7 @@
 layout: post
 title: Something With a Realllly Long and Complex Title
 author: Sally Mae
-tags: masculinity, color, dogs, cats, rats
+tags: masculinity color dogs cats rats
 ---
 
 Next you can update your site name, avatar and other options using the `_config.yml` file in some note[^1]

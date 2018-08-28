@@ -2,6 +2,7 @@
 layout: post
 title: You're up and running!
 author: Sam I Am
+tags: macaroni-and-cheese queso cats
 ---
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
