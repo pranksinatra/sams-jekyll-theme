@@ -83,20 +83,6 @@
     }
 }
 
-.share {
-    display: flex;
-    padding: 1em 0;
-    margin-bottom: 1em;
-    border-bottom: 1px solid $grey-200;
-    &__button {
-        &:not(:last-child) {
-            margin-right: 1em;
-        }
-        &--print {
-            margin-left: auto;
-        }
-    }
-}
 
 .page {
 
@@ -107,3 +93,43 @@
 
 
 
+/* ==========================================================================
+   Share/print buttons
+   ========================================================================== */
+
+
+
+.share {
+    display: flex;
+    padding: 1em 0;
+    margin-bottom: 1em;
+    border-bottom: 1px solid $grey-200;
+    &__button {
+        
+        padding: .25em .5em;
+        color: white;
+        border-radius: 3px;
+        text-decoration: none;
+
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
+        &--facebook {
+            background: #3b5998;
+        }
+        &--twitter {
+            background: #00aced;
+        }
+        &--email {
+            background: $bg;
+        }
+        &--print {
+            background: #8b69a6;
+            margin-left: auto;
+        }
+
+        svg {
+            margin: -4px 2px 0 0;
+        }
+    }
+}
