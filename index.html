@@ -2,19 +2,20 @@
 layout: default
 ---
 
-<h1>Recent Posts</h1>
+<h1 class="posts-title">Recent Posts</h1>
 
 <div class="posts">
   {% for post in site.posts %}
     <article class="posts__preview">
 
-      <h1 class="h2"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <h1 class="h2 posts__title">
+      	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </h1>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+      <div class="posts__date">{{ post.date | date: "%B %e, %Y" }}</div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <div class="posts__excerpt">{{ post.excerpt }}</div>
+
     </article>
   {% endfor %}
 </div>

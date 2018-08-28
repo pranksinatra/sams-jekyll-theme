@@ -20,28 +20,28 @@
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-  <div class="page">
-    <div class="header">
-      <div class="header__content">
-        <div class="header__site-info">
-          <h1 class="header__site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-          <p class="header__site-description">{{ site.description }}</p>
-        </div>
-
-        <nav class="header__nav">
-          <a class="header__nav-item" href="{{ site.baseurl }}/">Blog</a>
-          <a class="header__nav-item" href="{{ site.baseurl }}/about">About</a>
-          <a class="header__nav-item" href="{{ site.baseurl }}/404">Last Page</a>
-        </nav>
+  <div class="header">
+    <div class="header__content">
+      <div class="header__site-info">
+        <h1 class="header__site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+        <p class="header__site-description">{{ site.description }}</p>
       </div>
+
+      <nav class="header__nav">
+        <a class="header__nav-item" href="{{ site.baseurl }}/">Blog</a>
+        <a class="header__nav-item" href="{{ site.baseurl }}/about">About</a>
+        <a class="header__nav-item" href="{{ site.baseurl }}/404">Last Page</a>
+      </nav>
     </div>
+  </div>
 
-    <main class="content">
-      {{ content }}
-    </main>
+  <main class="content">
+    {{ content }}
+  </main>
 
-    <div class="footer">
-      footer...
+  <div class="footer">
+    <div class="footer__content">
+      <small class="footer__copyright">© Copyright {{ site.time | date: '%Y' }} {{ site.name }}</small>
     </div>
   </div>
 

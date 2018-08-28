@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Second Post
+author: John Smith
 ---
 
 Lorem markdownum Byblis, male *movit*, turbine miserum habet modo? Sum illic
