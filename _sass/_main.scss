@@ -1,135 +1,133 @@
-
 /* ==========================================================================
    Layout classes
    ========================================================================== */
 
 .content {
-    width: 30em;
-    max-width: calc(100% - 2em);
-    margin: 0 auto;
+  width: 30em;
+  max-width: calc(100% - 2em);
+  margin: 0 auto;
 
-    > h1 {
-        text-align: center;
-    }
+  > h1 {
+    text-align: center;
+  }
 }
 
 .posts-title {
-    // color: $grey-text;
+  // color: $grey-text;
 }
 
 .posts {
-    margin: 2em 0;
+  margin: 2em 0;
 
-    &__preview {
-        padding-bottom: 1em;
-        margin-bottom: 2em;
+  &__preview {
+    padding-bottom: 1em;
+    margin-bottom: 2em;
 
-        &:not(:last-child) {
-            border-bottom: 1px solid $grey-200;
-        }
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey-200;
     }
+  }
 
-    &__title {
-        margin-bottom: 0;
-        a { 
-            text-decoration: none;
-            transition: background .3s ease-in-out, box-shadow .3s ease-in-out;
-            &:hover, &:focus { 
-                background-color: $grey-200; 
-                box-shadow: 4px 0 0 0 $grey-200, -4px 0 0 0 $grey-200; 
-            }
-        }
+  &__title {
+    margin-bottom: 0;
+    a {
+      text-decoration: none;
+      transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      &:hover,
+      &:focus {
+        background-color: $grey-200;
+        box-shadow: 4px 0 0 0 $grey-200, -4px 0 0 0 $grey-200;
+      }
     }
+  }
 
-    &__date {
-        margin-bottom: 14px;
-        color: $grey-text;
-    }
+  &__date {
+    margin-bottom: 14px;
+    color: $grey-text;
+  }
 
-    &__excerpt {
-
-    }
+  &__excerpt {
+  }
 }
 
 .post {
-    margin: 0 0 2em;
+  margin: 0 0 2em;
 
-    &__title {
-        margin-bottom: 0;
-    }
+  &__title {
+    margin-bottom: 0;
+  }
 
-    &__date {
-        margin-bottom: 14px;
-        color: $grey-text;
-    }
+  &__date {
+    margin-bottom: 14px;
+    color: $grey-text;
+  }
 
-    &__content {
-        border-bottom: 1px solid $grey-200;
-    }
+  &__content {
+    border-bottom: 1px solid $grey-200;
+  }
 
-    &__author {
-        span {
-            color: $grey-text;
-        }
+  &__author {
+    span {
+      color: $grey-text;
     }
-    &__tags {
-        span {
-            color: $grey-text;
-        }
+  }
+  &__tags {
+    span {
+      color: $grey-text;
     }
+  }
 
-    img {
-        max-width: 100%;
-    }
+  img {
+    max-width: 100%;
+  }
 }
-
 
 .page {
-
-    &__title {
-        text-align: center;
-    }
+  &__title {
+    text-align: center;
+  }
 }
-
-
 
 /* ==========================================================================
    Share/print buttons
    ========================================================================== */
 
-
-
 .share {
-    display: flex;
-    padding: 1em 0;
-    margin-bottom: 1em;
-    border-bottom: 1px solid $grey-200;
-    &__button {
-        
-        padding: .25em .5em;
-        color: white;
-        border-radius: 3px;
-        text-decoration: none;
+  display: flex;
+  padding: 1em 0;
+  margin-bottom: 1em;
+  border-bottom: 1px solid $grey-200;
+  &__button {
+    padding: 0.25em 0.5em;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
 
-        &:not(:last-child) {
-            margin-right: 1em;
-        }
-        &--facebook {
-            background: #3b5998;
-        }
-        &--twitter {
-            background: #00aced;
-        }
-        &--email {
-            background: $bg;
-        }
-        &--print {
-            background: #8b69a6;
-            margin-left: auto;
-        }
-
-        svg {
-            margin: -4px 2px 0 0;
-        }
+    &:not(:last-child) {
+      margin-right: 1em;
     }
+    &--facebook {
+      background: #3b5998;
+    }
+    &--twitter {
+      background: #00aced;
+    }
+    &--email {
+      background: $bg;
+    }
+    &--print {
+      background: #8b69a6;
+      margin-left: auto;
+    }
+
+    svg {
+      margin: -4px 2px 0 0;
+    }
+  }
+}
+
+.comments {
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 1px solid $grey-200;
 }
