@@ -3,20 +3,21 @@ layout: default
 ---
 
 <article class="post">
-  <h1  class="post__title">{{ page.title }}</h1>
-  <div class="post__date">{{ page.date | date: "%B %e, %Y" }}</div>
 
-  <div class="post__content">
+  <h1 class="post__title column">{{ page.title }}</h1>
+  <div class="post__date column">{{ page.date | date: "%B %e, %Y" }}</div>
+
+  <div class="post__content column">
     {{ content }}
   </div>
 
   {% include share.html %}
 
-  <div class="post__author">
+  <div class="post__author column">
   	<span>Written by </span>{{ page.author }}
   </div>
 
-  <div class="post__tags">
+  <div class="post__tags column">
   	<span>Filed under </span>{% for tag in page.tags %}
       {% capture tag_name %}{{ tag }}{% endcapture %}
       {% if forloop.rindex == 2 %}
@@ -29,6 +30,6 @@ layout: default
     {% endfor %}
   </div>
 
-  {% include disqus.html %}
-
 </article>
+
+{% include disqus.html %}

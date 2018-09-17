@@ -2,22 +2,19 @@
    Layout classes
    ========================================================================== */
 
-.content {
-  width: 30em;
+.column {
+  width: 30rem;
   max-width: calc(100% - 2em);
   margin: 0 auto;
-
-  > h1 {
-    text-align: center;
-  }
 }
 
 .posts-title {
-  // color: $grey-text;
+  text-align: center;
 }
 
 .posts {
-  margin: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
 
   &__preview {
     padding-bottom: 1em;
@@ -54,6 +51,7 @@
   margin: 0 0 2em;
 
   &__title {
+    text-align: center;
     margin-bottom: 0;
   }
 
@@ -113,12 +111,18 @@
       background: #00aced;
     }
     &--email {
-      background: $bg;
+      background: $purple-light;
     }
     &--print {
-      background: #8b69a6;
+      background: #00eaca;
       margin-left: auto;
     }
+
+    // transition: all 0.3s ease-in-out;
+    // &:hover {
+    //   transform: scale(1.025);
+    //   // box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    // }
 
     svg {
       margin: -4px 2px 0 0;
@@ -127,7 +131,9 @@
 }
 
 .comments {
-  margin-top: 1em;
-  padding-top: 0.5em;
-  border-top: 1px solid $grey-200;
+  border-top: 2px solid $grey-300;
+  padding: 1.5em 0 0.5em;
+  background: $grey-200;
 }
+
+
