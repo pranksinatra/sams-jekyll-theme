@@ -18,7 +18,9 @@
     &:hover,
     &:focus {
       color: white;
-      text-decoration: underline;
+      span {
+        text-decoration: underline;
+      }
     }
   }
 
