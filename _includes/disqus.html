@@ -19,7 +19,8 @@
             var scrollAmount = window.scrollY;
             var distanceFromBottom = totalHeight - viewportHeight - scrollAmount;
 
-            if (distanceFromBottom < 400) {
+            if (distanceFromBottom < 700) {
+              console.log('Loading Disqus at ', distanceFromBottom, 'pixels from bottom of screen');
               loadDiqus();
             }
             else {

@@ -50,6 +50,16 @@
 .post {
   margin: 0 0 2em;
 
+  h1 {
+    @extend .h2;
+  }
+  h2 {
+    @extend .h3;
+  }
+  h3 {
+    @extend .h4;
+  }
+
   &__title {
     margin-bottom: 0;
   }
@@ -61,6 +71,13 @@
 
   &__content {
     border-bottom: 1px solid $grey-200;
+  }
+
+  .footnotes {
+    //   border-top: 1px solid #f2f2f3;
+    //   h2 {
+    //     margin-top: 1rem;
+    //   }
   }
 
   &__author {
@@ -82,6 +99,93 @@
 .page {
   &__title {
     text-align: center;
+  }
+}
+
+/* ==========================================================================
+   Footnotes
+   ========================================================================== */
+sup a {
+  padding: 0 2px;
+  border: 1px solid $light;
+  transition: background 0.3s ease-in-out;
+  &:hover,
+  &:focus {
+    background: $light;
+  }
+}
+sup + sup {
+  margin-left: 2px;
+}
+sup:target a {
+  background: $light;
+  border-color: $light;
+}
+.footnotes {
+  margin-top: 27px;
+
+  &--collapsed {
+    position: relative;
+    overflow: hidden;
+    height: 7.75rem;
+    margin-bottom: 1rem;
+    &:before,
+    &:after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    &:before {
+      content: '';
+      width: 100%;
+      height: 5rem;
+      background-image: linear-gradient(transparent, rgba($bg, 0.8), $bg);
+    }
+    &:after {
+      content: 'Click to read notes ›';
+      padding: 1rem;
+      // text-align: center;
+      // text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.8em;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+  }
+  li {
+    padding: 0 1rem;
+    margin: 0;
+    &:target {
+      padding: 1rem;
+      border: 4px solid $light;
+      padding: calc(1rem - 4px);
+      margin-bottom: 1.3em;
+      > *:last-child {
+        margin-bottom: 0;
+        &:after {
+          display: none;
+        }
+      }
+    }
+    p:first-child {
+      display: inline;
+      &:after {
+        content: '';
+        display: block;
+        height: 1.3em;
+      }
+    }
   }
 }
 
@@ -135,5 +239,3 @@
   background: $grey-200;
   min-height: 390px; // Prevent reflow if possible
 }
-
-

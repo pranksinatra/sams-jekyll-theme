@@ -27,6 +27,8 @@ $grey-200: #f2f2f3;
 $grey-300: #e7e9ee;
 $grey-text: #b0b0b0;
 
+$bg: $grey-100;
+
 /* ==========================================================================
    Typography classes
 
@@ -65,7 +67,7 @@ $grey-text: #b0b0b0;
 
 html {
   font-size: 16px;
-  background: $grey-100;
+  background: $bg;
 } // Use px instead of em to prevent cross-browser zooming inconsistency
 
 body {
@@ -128,3 +130,4 @@ a {
 svg {
   fill: currentColor;
 }
+
