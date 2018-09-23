@@ -6,9 +6,43 @@
 	    var disqus_shortname = '{{ site.disqus }}';
 
 	    (function() {
-	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+        checkScrollPosition();
+
+        function checkScrollPosition() {
+          window.removeEventListener('scroll', checkScrollPosition);
+
+          ric(function() {
+
+            var totalHeight = document.body.scrollHeight;
+            var viewportHeight = window.innerHeight;
+            var scrollAmount = window.scrollY;
+            var distanceFromBottom = totalHeight - viewportHeight - scrollAmount;
+
+            if (distanceFromBottom < 400) {
+              loadDiqus();
+            }
+            else {
+              window.addEventListener('scroll', checkScrollPosition);
+            }
+          });
+        }
+
+        function loadDiqus() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }
+
+        // Crude requestIdleCallback polyfill
+        function ric(callback) {
+          if (window.requestIdleCallback) {
+            window.requestIdleCallback(callback);
+          } else {
+            setTimeout(callback, 50);
+          }
+        }
+
 	    })();
 
 	</script>

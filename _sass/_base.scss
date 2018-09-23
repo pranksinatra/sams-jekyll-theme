@@ -65,10 +65,10 @@ $grey-text: #b0b0b0;
 
 html {
   font-size: 16px;
+  background: $grey-100;
 } // Use px instead of em to prevent cross-browser zooming inconsistency
 
 body {
-  background-color: $grey-100; // white;
   font-family: 'Alegreya Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.45;

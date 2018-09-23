@@ -133,6 +133,7 @@
   border-top: 2px solid $grey-300;
   padding: 1.5em 0 0.5em;
   background: $grey-200;
+  min-height: 390px; // Prevent reflow if possible
 }
 
 
